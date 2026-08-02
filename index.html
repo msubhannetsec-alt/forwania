@@ -370,6 +370,20 @@ Hi Wania...
 
 <p id="typing"></p>
 
+<div id="nextArea" style="display:none;text-align:center;margin-top:35px;">
+
+<button onclick="showCard1()">
+
+❤️ Continue
+
+</button>
+
+</div>
+
+<div id="card1" style="display:none;">
+
+</div>
+
 </div>
 </div>
 <script>
@@ -407,6 +421,7 @@ i++;
 if(i>=message.length){
 
 clearInterval(timer);
+  document.getElementById("nextArea").style.display="block";
 
 }
 
@@ -422,7 +437,43 @@ behavior:"smooth"
 
 }
   window.onload=function(){
+function showCard1(){
 
+document.getElementById("card1").style.display="block";
+
+document.getElementById("card1").innerHTML=`
+
+<h2 style="font-family:'Dancing Script';font-size:42px;text-align:center;margin-top:45px;">
+
+🌸
+
+</h2>
+
+<p style="font-size:19px;line-height:2;">
+
+3 saal...
+
+Sunne mein sirf ek number lagta hai.
+
+Lekin meri zindagi mein...
+
+Ye 3 saal sirf waqt nahi thay.
+
+Ye meri zindagi ke sab se khoobsurat chapters thay.
+
+</p>
+
+`;
+
+window.scrollTo({
+
+top:document.body.scrollHeight,
+
+behavior:"smooth"
+
+});
+
+}
 setTimeout(()=>{
 
 document.getElementById("loader").style.opacity="0";
