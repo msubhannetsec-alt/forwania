@@ -1,0 +1,1909 @@
+/* ==========================================================
+   WANIA'S SECRET GARDEN
+   STYLE.CSS
+   PART 1A
+========================================================== */
+
+/* ===========================
+   GOOGLE FONT RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#fdeff4;
+
+    color:#333;
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+    position:relative;
+
+}
+
+/* ===========================
+   VARIABLES
+=========================== */
+
+:root{
+
+    --pink:#ff6fa5;
+
+    --lightPink:#ffd6e8;
+
+    --darkPink:#ff2d75;
+
+    --green:#42b883;
+
+    --grass:#58c46b;
+
+    --sky:#87CEEB;
+
+    --night:#091540;
+
+    --white:#ffffff;
+
+    --glass:rgba(255,255,255,.18);
+
+    --shadow:0 20px 40px rgba(0,0,0,.15);
+
+    --radius:25px;
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ffe6ef;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--pink);
+
+    border-radius:20px;
+
+}
+
+/* ===========================
+   HIDDEN CLASS
+=========================== */
+
+.hidden{
+
+    display:none !important;
+
+}
+
+/* ===========================
+   LOADER
+=========================== */
+
+#loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:linear-gradient(
+    180deg,
+    #ffd9eb,
+    #fff5fa);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+}
+
+.loader-box{
+
+    text-align:center;
+
+}
+
+.loader-heart{
+
+    font-size:70px;
+
+    animation:heartbeat 1s infinite;
+
+}
+
+.loader-box h2{
+
+    margin-top:20px;
+
+    color:var(--darkPink);
+
+    font-weight:600;
+
+}
+
+.loader-box p{
+
+    margin-top:10px;
+
+    color:#666;
+
+}
+
+/* ===========================
+   HEART ANIMATION
+=========================== */
+
+@keyframes heartbeat{
+
+0%{
+
+transform:scale(1);
+
+}
+
+25%{
+
+transform:scale(1.15);
+
+}
+
+50%{
+
+transform:scale(.95);
+
+}
+
+75%{
+
+transform:scale(1.10);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/* ===========================
+   BACKGROUND EFFECTS
+=========================== */
+
+#stars,
+#fireflies,
+#petals,
+#rain,
+#floatingHearts{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+}
+
+/* ===========================
+   LANDING PAGE
+=========================== */
+
+#landing{
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+    180deg,
+    #ffe4ef,
+    #fffafc);
+
+}
+
+.landing-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    backdrop-filter:blur(4px);
+
+}
+
+.landing-content{
+
+    position:relative;
+
+    width:min(90%,850px);
+
+    padding:60px;
+
+    text-align:center;
+
+    background:var(--glass);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow);
+
+    border:1px solid rgba(255,255,255,.4);
+
+}
+
+.small-title{
+
+    display:inline-block;
+
+    padding:8px 20px;
+
+    border-radius:50px;
+
+    background:#fff;
+
+    color:var(--darkPink);
+
+    font-size:14px;
+
+    margin-bottom:20px;
+
+}
+
+.landing-content h1{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:72px;
+
+    color:var(--darkPink);
+
+}
+
+.landing-content p{
+
+    margin-top:25px;
+
+    line-height:2;
+
+    font-size:18px;
+
+    color:#555;
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.landing-buttons{
+
+    margin-top:40px;
+
+    display:flex;
+
+    gap:20px;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+}
+
+.landing-buttons button{
+
+    padding:16px 35px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+#enterGarden{
+
+    background:var(--pink);
+
+    color:#fff;
+
+}
+
+#playMusic{
+
+    background:#fff;
+
+    color:var(--darkPink);
+
+}
+
+.landing-buttons button:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+
+}
+/* ==========================================================
+   MAIN GARDEN
+========================================================== */
+
+#garden{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:100vh;
+
+    background:linear-gradient(
+        180deg,
+        var(--sky) 0%,
+        #d9f6ff 40%,
+        #b6ecb8 100%
+    );
+
+    overflow:hidden;
+
+}
+
+/* ===========================
+   SKY
+=========================== */
+
+#sky{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:320px;
+
+    overflow:hidden;
+
+}
+
+.sun{
+
+    position:absolute;
+
+    width:130px;
+    height:130px;
+
+    border-radius:50%;
+
+    background:#FFD54F;
+
+    top:40px;
+    right:80px;
+
+    box-shadow:
+    0 0 60px #FFD54F,
+    0 0 120px rgba(255,213,79,.5);
+
+}
+
+.moon{
+
+    position:absolute;
+
+    width:90px;
+    height:90px;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+    top:45px;
+    right:90px;
+
+    box-shadow:
+    0 0 35px #fff;
+
+}
+
+/* ===========================
+   CLOUDS
+=========================== */
+
+.cloud{
+
+    position:absolute;
+
+    background:white;
+
+    width:180px;
+    height:60px;
+
+    border-radius:100px;
+
+    opacity:.85;
+
+}
+
+.cloud::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:80px;
+    height:80px;
+
+    background:white;
+
+    border-radius:50%;
+
+    left:25px;
+    top:-35px;
+
+}
+
+.cloud::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:90px;
+    height:90px;
+
+    background:white;
+
+    border-radius:50%;
+
+    right:25px;
+    top:-40px;
+
+}
+
+.cloud-1{
+
+    top:70px;
+    left:6%;
+
+    animation:cloudMove 60s linear infinite;
+
+}
+
+.cloud-2{
+
+    top:120px;
+    left:40%;
+
+    animation:cloudMove 90s linear infinite;
+
+}
+
+.cloud-3{
+
+    top:40px;
+    left:75%;
+
+    animation:cloudMove 75s linear infinite;
+
+}
+
+@keyframes cloudMove{
+
+    from{
+
+        transform:translateX(-200px);
+
+    }
+
+    to{
+
+        transform:translateX(250px);
+
+    }
+
+}
+
+/* ===========================
+   GARDEN BACKGROUND
+=========================== */
+
+#gardenBackground{
+
+    position:relative;
+
+    margin-top:220px;
+
+    width:100%;
+
+    height:420px;
+
+}
+
+/* Hills */
+
+.hill{
+
+    position:absolute;
+
+    bottom:0;
+
+    border-radius:50% 50% 0 0;
+
+    background:linear-gradient(
+        to top,
+        #3fb86b,
+        #7ad67b
+    );
+
+}
+
+.hill-left{
+
+    width:520px;
+    height:260px;
+
+    left:-120px;
+
+}
+
+.hill-center{
+
+    width:650px;
+    height:320px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+.hill-right{
+
+    width:500px;
+    height:250px;
+
+    right:-80px;
+
+}
+
+/* ===========================
+   GRASS
+=========================== */
+
+.grass-layer{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:100%;
+    height:130px;
+
+    background:linear-gradient(
+        to bottom,
+        #69cf73,
+        #2c9d47
+    );
+
+}
+
+/* ===========================
+   PATH
+=========================== */
+
+.garden-path{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:0;
+
+    transform:translateX(-50%);
+
+    width:220px;
+
+    height:320px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-evenly;
+
+    align-items:center;
+
+}
+
+.stone{
+
+    width:90px;
+
+    height:28px;
+
+    background:#d8d8d8;
+
+    border-radius:50px;
+
+    box-shadow:
+
+    inset 0 3px 4px rgba(255,255,255,.8),
+
+    0 5px 8px rgba(0,0,0,.15);
+
+}
+
+/* ===========================
+   GARDEN HEADER
+=========================== */
+
+#gardenHeader{
+
+    position:relative;
+
+    text-align:center;
+
+    margin-top:40px;
+
+    z-index:5;
+
+}
+
+#gardenHeader h2{
+
+    font-size:52px;
+
+    font-family:'Dancing Script',cursive;
+
+    color:var(--darkPink);
+
+}
+
+#gardenHeader p{
+
+    margin-top:15px;
+
+    font-size:18px;
+
+    color:#444;
+
+}
+
+/* ===========================
+   CONTROL BUTTONS
+=========================== */
+
+#controls{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin:40px auto;
+
+    z-index:10;
+
+    position:relative;
+
+}
+
+#controls button{
+
+    border:none;
+
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    background:white;
+
+    color:var(--darkPink);
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+}
+
+#controls button:hover{
+
+    background:var(--pink);
+
+    color:white;
+
+    transform:translateY(-5px);
+
+}
+/* ==========================================================
+   FLOWER GARDEN
+========================================================== */
+
+#flowerGarden{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:1200px;
+
+    margin:70px auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:80px;
+
+    z-index:5;
+
+}
+
+.flower-row{
+
+    display:flex;
+
+    justify-content:space-evenly;
+
+    align-items:flex-end;
+
+    flex-wrap:wrap;
+
+    gap:40px;
+
+}
+
+/* ===========================
+   FLOWER
+=========================== */
+
+.flower{
+
+    position:relative;
+
+    width:90px;
+
+    height:200px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.flower:hover{
+
+    transform:translateY(-12px) scale(1.05);
+
+}
+
+/* ===========================
+   STEM
+=========================== */
+
+.stem{
+
+    width:8px;
+
+    height:110px;
+
+    background:linear-gradient(
+        to bottom,
+        #43b94d,
+        #187d29
+    );
+
+    border-radius:20px;
+
+}
+
+/* ===========================
+   LEAVES
+=========================== */
+
+.leaf{
+
+    position:absolute;
+
+    width:28px;
+
+    height:16px;
+
+    background:#34a853;
+
+    border-radius:50%;
+
+}
+
+.leaf.left{
+
+    left:15px;
+
+    top:80px;
+
+    transform:rotate(-35deg);
+
+}
+
+.leaf.right{
+
+    right:15px;
+
+    top:105px;
+
+    transform:rotate(35deg);
+
+}
+
+/* ===========================
+   FLOWER HEAD
+=========================== */
+
+.flower-head{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    margin-bottom:10px;
+
+    animation:sway 4s ease-in-out infinite;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+
+}
+
+/* ===========================
+   FLOWER COLORS
+=========================== */
+
+.rose{
+
+    background:
+    radial-gradient(circle,
+    #ffb3c8 20%,
+    #ff3d7f 70%);
+
+}
+
+.tulip{
+
+    background:
+    radial-gradient(circle,
+    #ffb4e1 20%,
+    #ff5bb2 70%);
+
+}
+
+.blossom{
+
+    background:
+    radial-gradient(circle,
+    #fff4fa 10%,
+    #ffb7dd 80%);
+
+}
+
+.sunflower{
+
+    background:
+    radial-gradient(circle,
+    #5d3a00 20%,
+    #ffd600 65%);
+
+}
+
+.daisy{
+
+    background:
+    radial-gradient(circle,
+    #ffd700 20%,
+    #ffffff 65%);
+
+}
+
+.lavender{
+
+    background:
+    radial-gradient(circle,
+    #d4b5ff 20%,
+    #8a5cf6 75%);
+
+}
+
+.lily{
+
+    background:
+    radial-gradient(circle,
+    #ffffff 15%,
+    #ffd7e9 75%);
+
+}
+
+.golden{
+
+    background:
+    radial-gradient(circle,
+    #fff6b5 15%,
+    #ffca28 70%);
+
+    box-shadow:
+    0 0 20px gold,
+    0 0 50px rgba(255,215,0,.6);
+
+}
+
+/* ===========================
+   FLOWER SWAY
+=========================== */
+
+@keyframes sway{
+
+    0%{
+
+        transform:rotate(-4deg);
+
+    }
+
+    50%{
+
+        transform:rotate(4deg);
+
+    }
+
+    100%{
+
+        transform:rotate(-4deg);
+
+    }
+
+}
+
+/* ===========================
+   FLOWER HOVER
+=========================== */
+
+.flower:hover .flower-head{
+
+    transform:scale(1.12);
+
+    transition:.35s;
+
+}
+
+/* ==========================================================
+   GOLDEN FLOWER
+========================================================== */
+
+#goldenFlowerSection{
+
+    margin-top:120px;
+
+    text-align:center;
+
+}
+
+#goldenFlower{
+
+    width:120px;
+
+    margin:auto;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+#goldenFlower:hover{
+
+    transform:scale(1.15);
+
+}
+
+.golden-flower{
+
+    width:80px;
+
+    height:80px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+    #fff9c4,
+    #ffc107);
+
+    box-shadow:
+
+    0 0 25px gold,
+
+    0 0 60px rgba(255,215,0,.7);
+
+}
+
+#goldenFlowerSection h2{
+
+    margin-top:25px;
+
+    color:#d68900;
+
+    font-size:34px;
+
+}
+
+#goldenFlowerSection p{
+
+    margin-top:10px;
+
+    color:#666;
+
+}
+/* ==========================================================
+   BUTTERFLY
+========================================================== */
+
+#butterfly{
+
+    position:fixed;
+
+    top:180px;
+
+    left:8%;
+
+    width:70px;
+
+    height:55px;
+
+    z-index:999;
+
+    cursor:pointer;
+
+    animation:flyAround 18s linear infinite;
+
+}
+
+.butterfly-body{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:8px;
+
+    height:42px;
+
+    background:#2b2b2b;
+
+    border-radius:20px;
+
+    z-index:5;
+
+}
+
+.wing{
+
+    position:absolute;
+
+    width:32px;
+
+    height:38px;
+
+    background:linear-gradient(135deg,#ff8dc2,#ff4f95);
+
+    border-radius:70% 30% 70% 30%;
+
+    opacity:.95;
+
+    box-shadow:0 0 12px rgba(255,111,165,.45);
+
+}
+
+.left-wing{
+
+    left:0;
+
+    top:4px;
+
+    transform-origin:right center;
+
+    animation:wingLeft .25s ease-in-out infinite alternate;
+
+}
+
+.right-wing{
+
+    right:0;
+
+    top:4px;
+
+    transform-origin:left center;
+
+    animation:wingRight .25s ease-in-out infinite alternate;
+
+}
+
+@keyframes wingLeft{
+
+    from{
+
+        transform:rotate(-28deg);
+
+    }
+
+    to{
+
+        transform:rotate(18deg);
+
+    }
+
+}
+
+@keyframes wingRight{
+
+    from{
+
+        transform:rotate(28deg);
+
+    }
+
+    to{
+
+        transform:rotate(-18deg);
+
+    }
+
+}
+
+@keyframes flyAround{
+
+    0%{
+
+        transform:translate(0,0);
+
+    }
+
+    25%{
+
+        transform:translate(220px,-60px);
+
+    }
+
+    50%{
+
+        transform:translate(520px,50px);
+
+    }
+
+    75%{
+
+        transform:translate(260px,130px);
+
+    }
+
+    100%{
+
+        transform:translate(0,0);
+
+    }
+
+}
+
+/* ==========================================================
+   LOVE COUNTER
+========================================================== */
+
+#loveCounter{
+
+    width:min(1000px,92%);
+
+    margin:120px auto 60px;
+
+    padding:45px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.22);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:var(--shadow);
+
+}
+
+#loveCounter h2{
+
+    color:var(--darkPink);
+
+    font-size:42px;
+
+    margin-bottom:35px;
+
+}
+
+.counter-box{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+}
+
+.counter-item{
+
+    width:150px;
+
+    padding:25px;
+
+    border-radius:22px;
+
+    background:#ffffff;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.counter-item span{
+
+    display:block;
+
+    font-size:42px;
+
+    color:var(--darkPink);
+
+    font-weight:700;
+
+}
+
+.counter-item small{
+
+    color:#666;
+
+    font-size:15px;
+
+}
+
+/* ==========================================================
+   MEMORY GALLERY
+========================================================== */
+
+#gallery{
+
+    width:min(1200px,92%);
+
+    margin:100px auto;
+
+}
+
+#gallery h2{
+
+    text-align:center;
+
+    font-size:42px;
+
+    color:var(--darkPink);
+
+    margin-bottom:45px;
+
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:28px;
+
+}
+
+.gallery-card{
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    background:#fff;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+    transition:.4s;
+
+}
+
+.gallery-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.gallery-card img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.45s;
+
+}
+
+.gallery-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================================================
+   LOVE QUOTE
+========================================================== */
+
+#loveQuote{
+
+    width:min(900px,90%);
+
+    margin:100px auto;
+
+    text-align:center;
+
+}
+
+#loveQuote blockquote{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:42px;
+
+    color:var(--darkPink);
+
+    line-height:1.6;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.25);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:var(--shadow);
+
+}
+/* ==========================================================
+   MODALS
+========================================================== */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.55);
+
+    backdrop-filter:blur(10px);
+
+    z-index:5000;
+
+    padding:20px;
+
+}
+
+.modal.active{
+
+    display:flex;
+
+    animation:fadeIn .35s ease;
+
+}
+
+.modal-content{
+
+    position:relative;
+
+    width:min(650px,95%);
+
+    padding:40px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:0 25px 50px rgba(0,0,0,.25);
+
+    animation:popup .35s ease;
+
+}
+
+.close-modal{
+
+    position:absolute;
+
+    top:18px;
+
+    right:20px;
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:26px;
+
+    background:#fff0f6;
+
+    color:var(--darkPink);
+
+    transition:.3s;
+
+}
+
+.close-modal:hover{
+
+    background:var(--pink);
+
+    color:#fff;
+
+    transform:rotate(90deg);
+
+}
+
+@keyframes popup{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/* ==========================================================
+   LOVE LETTER
+========================================================== */
+
+.letter-box{
+
+    text-align:center;
+
+}
+
+.letter-box h1{
+
+    color:var(--darkPink);
+
+    margin-bottom:30px;
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:52px;
+
+}
+
+.letter-content{
+
+    line-height:2;
+
+    color:#555;
+
+    font-size:18px;
+
+}
+
+.letter-content h2{
+
+    margin-top:35px;
+
+    color:var(--darkPink);
+
+}
+
+.letter-content span{
+
+    display:block;
+
+    margin-top:25px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================================
+   MUSIC PLAYER
+========================================================== */
+
+#musicPlayer{
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+    display:flex;
+
+    gap:12px;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.9);
+
+    padding:12px 18px;
+
+    border-radius:50px;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.18);
+
+    z-index:1000;
+
+}
+
+#musicPlayer button{
+
+    width:46px;
+
+    height:46px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:var(--pink);
+
+    color:white;
+
+    font-size:18px;
+
+}
+
+#volumeSlider{
+
+    width:120px;
+
+}
+
+/* ==========================================================
+   NIGHT MODE
+========================================================== */
+
+#nightOverlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(5,12,40,.55);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.5s;
+
+    z-index:100;
+
+}
+
+body.night #nightOverlay{
+
+    opacity:1;
+
+}
+
+body.night #garden{
+
+    background:linear-gradient(
+        180deg,
+        #091540,
+        #16396d,
+        #214f36
+    );
+
+}
+
+body.night .sun{
+
+    display:none;
+
+}
+
+body.night .moon{
+
+    display:block !important;
+
+}
+
+/* ==========================================================
+   LIGHTBOX
+========================================================== */
+
+#lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.85);
+
+    z-index:9999;
+
+}
+
+#lightbox.active{
+
+    display:flex;
+
+}
+
+#lightbox img{
+
+    max-width:90%;
+
+    max-height:85vh;
+
+    border-radius:20px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.4);
+
+}
+
+#closeLightbox{
+
+    position:absolute;
+
+    top:25px;
+
+    right:40px;
+
+    font-size:50px;
+
+    color:#fff;
+
+    cursor:pointer;
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer{
+
+    padding:80px 20px;
+
+    text-align:center;
+
+    background:linear-gradient(
+        180deg,
+        #ffd8ea,
+        #ffc5df
+    );
+
+}
+
+footer h2{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:48px;
+
+    color:var(--darkPink);
+
+}
+
+footer p{
+
+    margin-top:15px;
+
+    color:#555;
+
+    font-size:18px;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:768px){
+
+    .landing-content{
+
+        padding:35px 20px;
+
+    }
+
+    .landing-content h1{
+
+        font-size:50px;
+
+    }
+
+    #gardenHeader h2{
+
+        font-size:38px;
+
+    }
+
+    .flower-row{
+
+        gap:60px;
+
+    }
+
+    .counter-item{
+
+        width:120px;
+
+    }
+
+    #musicPlayer{
+
+        right:10px;
+
+        bottom:10px;
+
+        transform:scale(.9);
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    .landing-content h1{
+
+        font-size:40px;
+
+    }
+
+    .landing-content p{
+
+        font-size:15px;
+
+    }
+
+    .landing-buttons{
+
+        flex-direction:column;
+
+    }
+
+    #gallery h2,
+    #loveCounter h2{
+
+        font-size:32px;
+
+    }
+
+    #loveQuote blockquote{
+
+        font-size:28px;
+
+    }
+
+}
