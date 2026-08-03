@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ========================================= -->
+    <!-- BASIC META -->
+    <!-- ========================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>🌸 Wania's Secret Garden ❤️</title>
+
+    <meta name="description"
+          content="A beautiful digital flower garden made with love for Wania.">
+
+    <meta name="theme-color"
+          content="#ff6fa5">
+
+    <!-- ========================================= -->
+    <!-- GOOGLE FONTS -->
+    <!-- ========================================= -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap"
+          rel="stylesheet">
+
+    <!-- ========================================= -->
+    <!-- FONT AWESOME -->
+    <!-- ========================================= -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- ========================================= -->
+    <!-- MAIN CSS -->
+    <!-- ========================================= -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<!-- ========================================= -->
+<!-- LOADER -->
+<!-- ========================================= -->
+
+<div id="loader">
+
+    <div class="loader-box">
+
+        <div class="loader-heart">
+
+            ❤
+
+        </div>
+
+        <h2>
+
+            Preparing Wania's Secret Garden...
+
+        </h2>
+
+        <p>
+
+            Please wait a moment 🌸
+
+        </p>
+
+    </div>
+
+</div>
+
+<!-- ========================================= -->
+<!-- BACKGROUND EFFECTS -->
+<!-- ========================================= -->
+
+<div id="stars"></div>
+
+<div id="fireflies"></div>
+
+<div id="petals"></div>
+
+<div id="rain"></div>
+
+<div id="floatingHearts"></div>
+
+<!-- ========================================= -->
+<!-- BACKGROUND MUSIC -->
+<!-- ========================================= -->
+
+<audio id="bgMusic" loop>
+
+    <source
+        src="assets/music/love.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+<!-- ========================================= -->
+<!-- LANDING PAGE -->
+<!-- ========================================= -->
+
+<section id="landing">
+
+    <div class="landing-overlay"></div>
+
+    <div class="landing-content">
+
+        <span class="small-title">
+
+            🌸 Made With Love
+
+        </span>
+
+        <h1>
+
+            Welcome Wania ❤️
+
+        </h1>
+
+        <p>
+
+            This isn't just a website...
+
+            It's a little garden created only for you.
+
+            Every flower hides a message.
+
+            Every message carries a memory.
+
+            Every memory reminds me of you.
+
+        </p>
+
+        <div class="landing-buttons">
+
+            <button id="enterGarden">
+
+                🌷 Enter My Garden
+
+            </button>
+
+            <button id="playMusic">
+
+                <i class="fa-solid fa-music"></i>
+
+                Play Music
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- MAIN GARDEN START -->
+<!-- ========================================= -->
+
+<main id="garden" class="hidden">
+        <!-- ========================================= -->
+    <!-- SKY SECTION -->
+    <!-- ========================================= -->
+
+    <section id="sky">
+
+        <div class="sun"></div>
+
+        <div class="moon hidden"></div>
+
+        <div class="cloud cloud-1"></div>
+
+        <div class="cloud cloud-2"></div>
+
+        <div class="cloud cloud-3"></div>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- GARDEN BACKGROUND -->
+    <!-- ========================================= -->
+
+    <section id="gardenBackground">
+
+        <div class="hill hill-left"></div>
+
+        <div class="hill hill-center"></div>
+
+        <div class="hill hill-right"></div>
+
+        <div class="grass-layer"></div>
+
+        <div class="garden-path">
+
+            <span class="stone"></span>
+            <span class="stone"></span>
+            <span class="stone"></span>
+            <span class="stone"></span>
+            <span class="stone"></span>
+            <span class="stone"></span>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- GARDEN HEADER -->
+    <!-- ========================================= -->
+
+    <section id="gardenHeader">
+
+        <h2>
+
+            🌸 Wania's Secret Garden ❤️
+
+        </h2>
+
+        <p>
+
+            Every flower blooms with a message.
+            Tap each one to discover a little piece of my heart.
+
+        </p>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- CONTROL PANEL -->
+    <!-- ========================================= -->
+
+    <section id="controls">
+
+        <button id="musicToggle">
+
+            <i class="fa-solid fa-music"></i>
+
+            Music
+
+        </button>
+
+        <button id="dayNightToggle">
+
+            🌙 Night
+
+        </button>
+
+        <button id="rainToggle">
+
+            🌧 Rain
+
+        </button>
+
+        <button id="galleryOpen">
+
+            📸 Gallery
+
+        </button>
+
+        <button id="letterOpen">
+
+            💌 Letter
+
+        </button>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- FLOWER GARDEN START -->
+    <!-- ========================================= -->
+
+    <section id="flowerGarden">
+
+        <div class="flower-row">
+
+            <div class="flower" data-flower="1">
+
+                <div class="flower-head rose"></div>
+
+                <div class="stem"></div>
+
+                <div class="leaf left"></div>
+
+                <div class="leaf right"></div>
+
+            </div>
+
+            <div class="flower" data-flower="2">
+
+                <div class="flower-head tulip"></div>
+
+                <div class="stem"></div>
+
+                <div class="leaf left"></div>
+
+                <div class="leaf right"></div>
+
+            </div>
+
+            <div class="flower" data-flower="3">
+
+                <div class="flower-head blossom"></div>
+
+                <div class="stem"></div>
+
+                <div class="leaf left"></div>
+
+                <div class="leaf right"></div>
+
+            </div>
+
+            <div class="flower" data-flower="4">
+
+                <div class="flower-head sunflower"></div>
+
+                <div class="stem"></div>
+
+                <div class="leaf left"></div>
+
+                <div class="leaf right"></div>
+
+            </div>
+
+        </div>
+
+        <div class="flower-row">
+
+            <div class="flower" data-flower="5">
+
+                <div class="flower-head daisy"></div>
+
+                <div class="stem"></div>
+
+                <div class="leaf left"></div>
+
+                <div class="leaf right"></div>
+
+            </div>
+
+            <div class="flower" data-flower="6">
+
+                <div class="flower-head lavender"></div>
+
+                <div class="stem"></div>
+
+                <div class="leaf left"></div>
+
+                <div class="leaf right"></div>
+
+            </div>
+
+            <div class="flower" data-flower="7">
+
+                <div class="flower-head lily"></div>
+
+                <div class="stem"></div>
+
+                <div class="leaf left"></div>
+
+                <div class="leaf right"></div>
+
+            </div>
+
+            <div class="flower" data-flower="8">
+
+                <div class="flower-head golden"></div>
+
+                <div class="stem"></div>
+
+                <div class="leaf left"></div>
+
+                <div class="leaf right"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+        <!-- ========================================= -->
+    <!-- FLYING BUTTERFLY -->
+    <!-- ========================================= -->
+
+    <div id="butterfly">
+
+        <div class="butterfly-body"></div>
+
+        <div class="wing left-wing"></div>
+
+        <div class="wing right-wing"></div>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- GOLDEN FLOWER -->
+    <!-- ========================================= -->
+
+    <section id="goldenFlowerSection">
+
+        <div id="goldenFlower">
+
+            <div class="flower-head golden-flower"></div>
+
+            <div class="stem"></div>
+
+            <div class="leaf left"></div>
+
+            <div class="leaf right"></div>
+
+        </div>
+
+        <h2>
+
+            Final Surprise
+
+        </h2>
+
+        <p>
+
+            Unlock all flowers to reveal something special.
+
+        </p>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- LOVE COUNTER -->
+    <!-- ========================================= -->
+
+    <section id="loveCounter">
+
+        <h2>
+
+            ❤️ Our Journey ❤️
+
+        </h2>
+
+        <div class="counter-box">
+
+            <div class="counter-item">
+
+                <span id="days">
+
+                    000
+
+                </span>
+
+                <small>Days</small>
+
+            </div>
+
+            <div class="counter-item">
+
+                <span id="hours">
+
+                    00
+
+                </span>
+
+                <small>Hours</small>
+
+            </div>
+
+            <div class="counter-item">
+
+                <span id="minutes">
+
+                    00
+
+                </span>
+
+                <small>Minutes</small>
+
+            </div>
+
+            <div class="counter-item">
+
+                <span id="seconds">
+
+                    00
+
+                </span>
+
+                <small>Seconds</small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- MEMORY GALLERY -->
+    <!-- ========================================= -->
+
+    <section id="gallery">
+
+        <h2>
+
+            📸 Beautiful Memories
+
+        </h2>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-card">
+                <img src="assets/images/photo1.jpg" alt="Memory 1">
+            </div>
+
+            <div class="gallery-card">
+                <img src="assets/images/photo2.jpg" alt="Memory 2">
+            </div>
+
+            <div class="gallery-card">
+                <img src="assets/images/photo3.jpg" alt="Memory 3">
+            </div>
+
+            <div class="gallery-card">
+                <img src="assets/images/photo4.jpg" alt="Memory 4">
+            </div>
+
+            <div class="gallery-card">
+                <img src="assets/images/photo5.jpg" alt="Memory 5">
+            </div>
+
+            <div class="gallery-card">
+                <img src="assets/images/photo6.jpg" alt="Memory 6">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- LOVE QUOTE -->
+    <!-- ========================================= -->
+
+    <section id="loveQuote">
+
+        <blockquote>
+
+            “Every flower has its own beauty,
+            but my favorite flower will always
+            be named Wania.”
+
+        </blockquote>
+
+    </section>
+        <!-- ========================================= -->
+    <!-- FLOWER MESSAGE MODAL -->
+    <!-- ========================================= -->
+
+    <div id="flowerModal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close-modal">&times;</button>
+
+            <div class="modal-header">
+
+                <h2 id="flowerTitle">
+
+                    🌸 A Flower For You
+
+                </h2>
+
+            </div>
+
+            <div class="modal-body">
+
+                <p id="flowerText">
+
+                    Every flower carries a beautiful message.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- LOVE LETTER MODAL -->
+    <!-- ========================================= -->
+
+    <div id="letterModal" class="modal">
+
+        <div class="modal-content letter-box">
+
+            <button class="close-modal">&times;</button>
+
+            <h1>
+
+                💌 To My Beautiful Wania
+
+            </h1>
+
+            <div class="letter-content">
+
+                <p>
+
+                    My Dearest Wania,
+
+                </p>
+
+                <p>
+
+                    This little garden isn't just made with HTML,
+                    CSS and JavaScript...
+
+                    It is made with love.
+
+                </p>
+
+                <p>
+
+                    Every flower represents
+                    a memory.
+
+                    Every color represents
+                    a smile.
+
+                    Every animation represents
+                    the happiness you bring into my life.
+
+                </p>
+
+                <p>
+
+                    Thank you for being
+                    my peace,
+                    my happiness
+                    and my favorite person.
+
+                </p>
+
+                <p>
+
+                    I don't know what tomorrow holds...
+
+                    But if you're with me,
+                    every tomorrow will be beautiful.
+
+                </p>
+
+                <h2>
+
+                    ❤️ I Love You Forever ❤️
+
+                </h2>
+
+                <span>
+
+                    — Muhammad Subhan
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- BUTTERFLY SECRET -->
+    <!-- ========================================= -->
+
+    <div id="butterflyModal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close-modal">&times;</button>
+
+            <h2>
+
+                🦋 Secret Message
+
+            </h2>
+
+            <p>
+
+                Some people enter our lives...
+
+                and quietly become our favorite place.
+
+            </p>
+
+            <p>
+
+                Wania,
+
+                thank you for being my favorite place.
+
+                ❤️
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- GOLDEN FLOWER MODAL -->
+    <!-- ========================================= -->
+
+    <div id="goldenModal" class="modal">
+
+        <div class="modal-content golden-box">
+
+            <button class="close-modal">&times;</button>
+
+            <h1>
+
+                🌹 Final Surprise 🌹
+
+            </h1>
+
+            <p>
+
+                Congratulations...
+
+                You discovered the Golden Flower.
+
+            </p>
+
+            <p>
+
+                Every flower in this garden
+                was waiting to tell you
+                how special you are.
+
+            </p>
+
+            <button id="readLetter">
+
+                💌 Read My Letter
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- FIREWORKS -->
+    <!-- ========================================= -->
+
+    <canvas id="fireworksCanvas"></canvas>
+
+    <!-- ========================================= -->
+    <!-- FLOATING HEARTS -->
+    <!-- ========================================= -->
+
+    <div id="heartContainer"></div>
+
+    <!-- ========================================= -->
+    <!-- NIGHT OVERLAY -->
+    <!-- ========================================= -->
+
+    <div id="nightOverlay"></div>
+
+    <!-- ========================================= -->
+    <!-- FOOTER -->
+    <!-- ========================================= -->
+
+    <footer>
+
+        <h2>
+
+            🌸 Wania's Secret Garden 🌸
+
+        </h2>
+
+        <p>
+
+            Created with endless love by
+            <strong>Muhammad Subhan</strong>
+
+        </p>
+
+        <p>
+
+            ❤️ Forever & Always ❤️
+
+        </p>
+
+    </footer>
+        <!-- ========================================= -->
+    <!-- SECRET PASSWORD POPUP -->
+    <!-- ========================================= -->
+
+    <div id="secretModal" class="modal">
+
+        <div class="modal-content secret-box">
+
+            <button class="close-modal">&times;</button>
+
+            <h2>🔐 Secret Garden</h2>
+
+            <p>
+
+                Enter the magic word to unlock
+                the hidden surprise.
+
+            </p>
+
+            <input
+                type="password"
+                id="secretInput"
+                placeholder="Enter Secret Word">
+
+            <button id="unlockSecret">
+
+                Unlock ❤️
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- MUSIC CONTROL -->
+    <!-- ========================================= -->
+
+    <div id="musicPlayer">
+
+        <button id="musicPlay">
+
+            <i class="fa-solid fa-play"></i>
+
+        </button>
+
+        <input
+            type="range"
+            id="volumeSlider"
+            min="0"
+            max="100"
+            value="70">
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- PHOTO LIGHTBOX -->
+    <!-- ========================================= -->
+
+    <div id="lightbox">
+
+        <span id="closeLightbox">
+
+            &times;
+
+        </span>
+
+        <img
+            id="lightboxImage"
+            src=""
+            alt="Memory">
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- HIDDEN EASTER EGG -->
+    <!-- ========================================= -->
+
+    <div id="easterEgg">
+
+        <h1>
+
+            ❤️ I LOVE YOU WANIA ❤️
+
+        </h1>
+
+        <p>
+
+            Thank you for coming into my life.
+
+        </p>
+
+    </div>
+
+</main>
+
+<!-- ========================================= -->
+<!-- JAVASCRIPT -->
+<!-- ========================================= -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
